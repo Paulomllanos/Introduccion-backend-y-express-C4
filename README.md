@@ -2,7 +2,7 @@
 
 Materia vista: Martes 21
 1) Que es express?
-2) Instanciacion de un servidor cone express
+2) Instanciacion de un servidor con express
 3) Uso de express para solicitud get
 4) request y response
 5) Desctructuracion dle request
