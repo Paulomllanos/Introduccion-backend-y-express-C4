@@ -1,7 +1,11 @@
 const express = require('express');
-
 const app = express();
+const registerRouter = require('./routes/registerRoute')
 //! C = POST R = GET U = PUT D = DELETE
+
+//* Nuestro servidor entienda json o otros
+app.use(express.json())
+app.use(registerRouter)
 
 app.get("/friends", (req, res) => {
     //console.log(req)
@@ -56,6 +60,7 @@ app.get("/friend", (req, res) => {
     console.log(req.query)
     res.json({success: true, mensaje: `Info de tu amigo: ${firstname} ${lastname}`})
 })
+
 
 app.listen(3000, () => console.log('Conectado en puerto 3000!!!'))
 
